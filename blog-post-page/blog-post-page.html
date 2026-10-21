@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Title of my page-->
+        <title>Blog-Post-Page</title> 
+
+        <style>
+            /*General body styling*/
+            body {
+                font-family:cursive;
+                border:2px;
+                max-width: max-content;
+                padding: 70px;
+            }
+
+            /*Styling the navigation pane*/
+            .nav {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            .nav-pane {
+                float:left;
+                text-align: center;
+                padding:10px;
+            }
+
+            /*Styling the figure*/
+            .image-box {
+                Border: 2px solid black;
+                Border-radius: 6px;
+                Width:70%;
+                Height:140px;
+            }
+
+            /*Styling the blockquot*/
+            blockquote {
+                border-left: 3px solid black;
+                margin: 30px 0;
+                padding-left: 15px;
+                padding-top: 15px;
+                width: 500px;
+            }
+
+            /*Styling the container*/
+            .container {
+                border:2px solid black;
+                border-radius: 10px;
+                padding-left:15px;
+                width:80%;
+            }
+        </style>
+    </head>
+<body>
+
+    <header>
+        <h2>MyBlog</h2>
+        <div>
+            <ul class="nav">
+                <li class="nav-pane">Home</li>
+                <li class="nav-pane">Blog</li>
+                <li class="nav-pane">About</li>
+                <li class="nav-pane">Contact</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>
+                Why Semantic HTML Matters
+            </h2>
+            <p>
+                May 20, 2026 by Alex Carter
+            </p>
+
+            <p>
+                Semantic HTML is about using the right tags 
+                for the meaning of your content.<br>
+                It improves accessibility, SEO, and 
+                makes your code easier to maintain.
+            </p>
+        </section>
+
+        <section>
+            <h3>Benefits</h3>
+            <p>
+                Using semantic HTML helps you:
+            </p>
+            <ul>
+            <li>Build more accessible websites</li>
+            <li>Improve search engine understanding</li>
+            <li>Write cleaner, more maintainable code</li>
+            </ul>
+            
+        </section>
+
+        <section>
+            <h3>Examples</h3>
+            <p>when you focus on <u>meaning</u>, not appearance, 
+                you write clearer content.
+            </p>
+            <p>
+                Using <u>meaning matters</u>, not appearance, 
+                and mark <u>important ideas</u> clearly
+            </p>
+              <figure>
+    <!--This SVG draws the mountains and sun sketch-->
+
+    <div class="image-box">
+      <svg viewBox="0 0 900 300">
+
+        <!--Sun--> 
+        <circle cx="690" cy="55" r="35" fill="none" stroke="black" stroke-width="5"/>
+
+        <!--Mountains-->
+        <polyline points="0,290 205,115 295,55"
+        fill="none" stroke="black" stroke-width="3"/>
+        <polyline points="295,55 385,135 475,220"
+        fill="none" stroke="black" stroke-width="3"/>
+        <polyline points="420,175 500,115 555,75"
+        fill="none" stroke="black" stroke-width="3"/>
+        <polyline points="555,75 650,150 740,230"
+        fill="none" stroke="black" stroke-width="3"/>
+        <polyline points="705,210 765,165 820,125"
+        fill="none" stroke="black" stroke-width="3"/>
+        <polyline points="820,125 900,190 995,275"
+        fill="none" stroke="black" stroke-width="3"/>
+      </svg>
+      <figcaption style="padding-top:25px; text-align: center;">Mountains at sunrise.</figcaption>
+    </div>
+    
+  </figure>
+
+    <blockquote>
+    <p>”The best way to learn HTML is by writing it.”</p>
+    <p>— MDN Web Docs</p>
+  </blockquote>
+
+
+
+        </section>
+
+        <section>
+            <h4>Code sample</h4>
+            <p>
+                Use the &ltcode&gt element for inline code, 
+                like &ltcode&gt main &lt/code&gt.<br>
+                Here is a code block:
+            </p>
+            <div class="container">
+                <p>
+                    &ltp class=&quotnote&quot&gt<br>
+                    Semantic HTML makes the web better for everyone.<br>
+                    &lt/p&gt
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h4>Learn more</h4>
+            <p>Read the <u>HTML Living Standard</u> to learn more about HTML.</p>
+        </section>
+    </main>
+
+    <footer>&copy; 2026 MyBlog. All rights reserved.</footer>
+</body>
+</html>
