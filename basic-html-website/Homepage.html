@@ -4,35 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="My personal portfolio website">
-    <meta name="keywords" content="portfolio, web developer, projects, articles">
-    <meta name="author" content="Modika Clinton">
+
 <link rel="icon" type="image/x-icon" href="C:\Users\USER\Desktop\Web-Projects\Images\Profile-photo.png">
 <style>
     body {
         border:2px solid black;
         max-width: max-content;
+        font-family: Arial, Helvetica, sans-serif;
     }
-    table, td {
-        border:1px solid black;
-        border-collapse:collapse;
-    }
-    h5 {
-        color:blue;
-    }
-    h3, h4 {
+/* Outer Big Border */
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns like your photo */
+    border: 2px solid black;
+  }
+
+/* Common styles */
+  .col {
+    border-right: 2px solid black;
+  }
+  .col:last-child {
+    border-right: none;
+  }
+
+  h2, h3 {
+    font-family: segoe print;
+    margin: 15px;
+  }
+
+  /* LEFT COLUMN - Projects */
+  .projects-item {
+    border-bottom: 2px solid black;
+    padding: 15px;
+  }
+  .projects-item:last-child {
+    border-bottom: none;
+  }
+
+  /* MIDDLE COLUMN - 2 rows stacked */
+  .middle-top, .middle-bottom {
+    padding: 15px;
+  }
+  .middle-top {
+    border-bottom: 2px solid black;
+  }
+
+  .link {
+    color: #4a90e2;
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+  }
+
+  /* RIGHT COLUMN */
+  .education {
+    padding: 15px;
+  }
+  .education ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+    .title {
         font-family:segoe print;
+        margin: 20px;
     }
-    h6 {
-        color:lightslategrey
+
+    .reviews-container {
+        display:flex;
+        gap:20px;
+        justify-content: space-between;
+        margin: 40px;
     }
-    
+
+    .review-box {
+        border:2px solid black;
+        border-radius: 30px;
+        padding: 20px;
+        width:30%;
+    }
+
+    .reviewer {
+        margin:15px;
+        color:#bbb;
+    }
+
 </style>
     <title>My Portfolio - Home</title>
 </head>
 
 <body>
 
+    <!--Navigation Panel that controls my four web pages-->
     <header>
         <div style="float:left;width:20px;height:20px;background-color: black;margin:10px;"></div>
         <div style="float:left;font-family: cursive;margin:10px;">your name</div>
@@ -46,102 +110,114 @@
 
     <main>
 
-        <section style="text-align: center;">
-            <h3>Frontend Developer</h3>
+        <section style="padding: 40px;">
+            <h2 style="text-align: center;">Frontend Developer</h2>
 
-            <p>
+            <p style="font-size: small;text-align: center;color:#bbb;">
                 html only with proper layout, no styling
             </p>
         </section>
+        <div class="container">
+  
+  <!-- LEFT, section that contains the projects -->
+  <div class="col">
+    <h3>Projects</h3>
+    <div class="projects-item">HTML Only Portfolio</div>
+    <div class="projects-item">Calculator</div>
+    <div class="projects-item">Quiz App</div>
+    <div class="projects-item">Countdown Timer</div>
+    <div class="projects-item">Product Upcoming Page</div>
+  </div>
 
+  <!-- MIDDLE, section that contains work experience -->
+  <div class="col">
+    <div class="middle-top">
+      <h3>Work Experience</h3>
+      <p style="font-family: segoe print;">roadmap.sh</p>
+      <p>Solved all the frontend projects</p>
+      <span class="link">Visit my Profile</span>
+    </div>
+    <div class="middle-bottom">
+      <p style="font-family: segoe print;">OpenSource Work</p>
+      <p>Contributed to 50 opensource<br>
+         projects. Made my own projects with<br>
+          200 GitHub Stars.</p>
+      <span class="link">Visit my GitHub Profile</span>
+    </div>
+  </div>
+
+  <!-- RIGHT, section that contains educational bakground -->
+  <div class="col">
+    <div class="education">
+      <h3>Education</h3>
+      <p>Graduated with 3.76 out of 4<br>
+         CGPA. Won Acme Hackathon.<br>
+         Organized 30 sessions.</p>
+      
+      <p>Courses I took:</p>
+      <ul>
+        <li>- Object Oriented Programming</li>
+        <li>- Data Structures and Algorithms</li>
+        <li>- Web Engineering</li>
+        <li>- Artificial Intelligence</li>
+        <li>- Human Computer Interaction</li>
+        <li>- Computer Graphics</li>
+        <li>- Database Management Systems</li>
+        <li>- Distributed Database Systems</li>
+        <li>- Discreet Mathematics</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
         <section>
-            <table>
-                <tr>
-                   <td style="text-align: center;">
-                    <h4>Projects</h4><br>
-                    HTML Only Portfolio
-                    <hr>
-                    Calculator
-                    <hr>
-                    Quiz App
-                    <hr>
-                    Countdown Timer
-                    <hr>
-                    Product Upcoming Page
-                </td>
-                   <td>
-                    <h4>Work Experience</h4><br>
-                    roadmap.sh<br>
-                Solved all the frontend projects<br>
-                <h5>Visit my Profile</h5>
-                <hr>
-                OpenSource Work<br>
-                Contributed to 50 opensource<br>
-                 projects.Made my own projects with<br>
-                 200 GitHub Stars<br>
-                <h5>Visit my GitHub Profile</h5>
-                </td>
 
-                   <td>
-                    <h4>Education</h4><br>
-                    Graduated with 3.76 out of 4<br>
-                     CGPA. Won Acme Hackathon.<br>
-                     Organized 30 sessions.<br><br>
-
-                    Course I took:<br><br>
-
-                    - Object Orinted Programming<br>
-                    - Data Structures and Algorithms<br>
-                    - Web Engineering<br>
-                    - Artificial Intelligence<br>
-                    - Human Computer Interaction<br>
-                    - Computer Graphics<br>
-                    - Database Management Systems<br>
-                    - Distributed Database Systems<br>
-                    - Discreet Mathematics<br>
-                </td>
-
-                </tr>
-              
-                </table>
-
+        </section>
+            
         <section>
-            <h3>Reviews from my Teachers</h3>
-            <table>
-                <tr>
-                
-                    <td>
-                        John Doe was a brilliant<br>
-                        student; always stood out<br>
-                        with his assignments.<br>
-                        <h6>Jane Doe<br>
-                         Assistant Professor</h6>
-                        
-                    </td>
-                    
-                    <td>
-                        John Doe was a brilliant<br>
-                        student; always stood out<br>
-                        with his assignments.<br>
-                        <h6>Jane Doe<br>
-                        Assistant Professor</h6>
-                    </td>
+            <div class="title">Reviews from my Teachers</div>
+            <div class="reviews-container">
 
-                    <td>
-                        John Doe was a brilliant<br>
+                <div class="review-box">
+                    <p>John Doe was a brilliant<br>
                         student; always stood out<br>
-                        with his assignments.<br>
-                        <h6>Jane Doe<br>
-                        Assistant Professor</h6>
-                    </td>
-                </tr>
-            </table>
+                        with his assignments.
+                    </p>
+                        <div class="reviewer">
+                            Jane Doe<br>
+                            Assistant Professor
+                        </div>
+                </div>
+
+                <div class="review-box">
+                    <p>John Doe was a brilliant<br>
+                        student; always stood out<br>
+                        with his assignments.
+                    </p>
+                        <div class="reviewer">
+                            Jane Doe<br>
+                            Assistant Professor
+                        </div>
+                </div>
+
+                <div class="review-box">
+                    <p>John Doe was a brilliant<br>
+                        student; always stood out<br>
+                        with his assignments.
+                    </p>
+                        <div class="reviewer">
+                            Jane Doe<br>
+                            Assistant Professor
+                        </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; All rights reserved 2025</p>
+        <p style="text-align: center;font-family: segoe print;">&copy; all rights reserved 2025</p>
     </footer>
 
 </body>
