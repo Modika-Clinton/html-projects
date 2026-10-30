@@ -3,22 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - My Website</title>
+  <title>Contact Us - My Blog</title>
+  <style>
+    body {
+        border:2px solid black;
+        max-width: 50%;
+        padding: 40px;
+        font-family: 'Comic Sans MS';
+    }
+    ul {
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
+    li{
+        float: left;
+        text-align: center;
+        padding: 15px;
+    }
+  </style>
 </head>
 <body>
 
   <!-- Navigation -->
   <nav>
-    <a href="blog-post-page.html">Home</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
+    <ul>
+    <li><a href="blog-post-page.html">Home</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav><br><br>
   <hr>
 
   <!-- Page Content -->
   <h1>Contact Us</h1>
-  <p>Email us at: <strong>support@example.com</strong></p>
+  <p>Email us at: <em>support@example.com</em></p>
   <form>
     <label for="name">Your Name:</label>
     <input type="text" id="name" required><br><br>
@@ -27,7 +48,9 @@
     <label>Your Message:</label><br>
     <textarea rows="6" cols="30"></textarea><br>
     <input type="submit" value="Click to Send">
-  </form>
+  </form><br><br>
+  <hr>
+  <footer>&copy; All rights reserved, 2026</footer>
 
 </body>
 </html>
